@@ -1,6 +1,8 @@
 pipeline {
     environment {
         DOMAIN='apps-crc.testing'
+        BRANCH_NAME=${env.GIT_BRANCH}
+        BUILD_NUMBER=${env.GIT_BUILD}
         PRJ="hello-${env.BRANCH_NAME}-${env.BUILD_NUMBER}"
         APP='nodeapp'
     }
